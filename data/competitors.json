@@ -87,5 +87,77 @@
       "strength": "Options + Perps kombiniert, institutionell",
       "weakness": "Nischenmarkt, niedrigeres Volumen"
     }
-  ]
+  ],
+  "feeComparison": {
+    "source": "DeFiLlama Fees API",
+    "lastUpdated": "2026-04-15",
+    "protocols": [
+      {
+        "name": "Hyperliquid",
+        "dailyFees": 2784053,
+        "monthlyFees": 63533566,
+        "allTimeFees": 1216239639,
+        "dailyRevenue": 2511452,
+        "monthlyRevenue": 56538456,
+        "allTimeRevenue": 1101852273,
+        "revenueModel": "Buyback & Burn von HYPE",
+        "mcap": 5000000000
+      },
+      {
+        "name": "Jupiter Perps",
+        "dailyFees": 368890,
+        "monthlyFees": 10954024,
+        "allTimeFees": 818092781,
+        "dailyRevenue": 92223,
+        "monthlyRevenue": 2738507,
+        "allTimeRevenue": 204523202,
+        "revenueModel": "75% JLP / 25% Treasury",
+        "mcap": 2000000000
+      },
+      {
+        "name": "Lighter",
+        "dailyFees": 104506,
+        "monthlyFees": 2844921,
+        "allTimeFees": 58999274,
+        "dailyRevenue": null,
+        "monthlyRevenue": null,
+        "allTimeRevenue": null,
+        "revenueModel": "k.A.",
+        "mcap": null
+      },
+      {
+        "name": "GMX",
+        "dailyFees": 178882,
+        "monthlyFees": 2483336,
+        "allTimeFees": 456341994,
+        "dailyRevenue": 66186,
+        "monthlyRevenue": 918834,
+        "allTimeRevenue": 147665796,
+        "revenueModel": "27% Staker / 63% LP / 10% Treasury",
+        "mcap": 63400000
+      },
+      {
+        "name": "dYdX",
+        "dailyFees": 10443,
+        "monthlyFees": 306345,
+        "allTimeFees": 97346557,
+        "dailyRevenue": 10443,
+        "monthlyRevenue": 306345,
+        "allTimeRevenue": 97346557,
+        "revenueModel": "100% an Validatoren/Staker",
+        "mcap": 800000000
+      },
+      {
+        "name": "Vertex",
+        "dailyFees": null,
+        "monthlyFees": null,
+        "allTimeFees": 30421960,
+        "dailyRevenue": null,
+        "monthlyRevenue": null,
+        "allTimeRevenue": null,
+        "revenueModel": "Fees an VRTX Staker",
+        "mcap": 150000000
+      }
+    ]
+  }
 }
