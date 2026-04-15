@@ -41,5 +41,119 @@
     "percentOfSupply": 12.9,
     "status": "Completed - now in power accrual phase"
   },
-  "source": "DeFiLlama API, GMX Docs"
+  "buybackDetailed": {
+    "phase1": {
+      "name": "Buyback & Distribute (BB&D)",
+      "startDate": "2024-10-30",
+      "endDate": "2026-03-04",
+      "description": "27% aller V2 Fees (30% V1) kaufen GMX am Markt und verteilen woechentlich an Staker.",
+      "totalBoughtBack": 2031625,
+      "avgAnnualizedYield": 21.59,
+      "governanceVote": "Snapshot + Tally On-Chain Vote (Mitte 2024)",
+      "tallyUrl": "https://www.tally.xyz/gov/gmx/proposal/81921330482579592877925554009800798217173652653143694483196169672340561914053"
+    },
+    "phase2": {
+      "name": "Strategic Buyback + Staking Power",
+      "startDate": "2026-03-04",
+      "endDate": null,
+      "description": "Buybacks laufen weiter, aber Rewards werden bis $90 GMX nicht ausgeschuettet. Stattdessen akkumuliert 'Staking Power' fuer proportionale Verteilung.",
+      "trigger": "$90 GMX Preis (vorheriges ATH)",
+      "governanceUrl": "https://gov.gmx.io/t/a-strategic-plan-to-neutralize-cex-supply-overhang-and-restore-gmx-price-discovery-revised/5042",
+      "substackUrl": "https://gmxio.substack.com/p/governance-update-a-strategic-plan"
+    },
+    "weeklyBuybacks": [
+      { "period": "KW 2 Jan 2026", "tokens": 16800, "usd": null, "avgPrice": null },
+      { "period": "11-17 Maerz 2026", "tokens": 16250, "usd": 111000, "avgPrice": 6.83 },
+      { "period": "18-24 Maerz 2026", "tokens": 18500, "usd": 120000, "avgPrice": 6.49 },
+      { "period": "25-31 Maerz 2026", "tokens": 13530, "usd": 89000, "avgPrice": 6.58 },
+      { "period": "01-07 Apr 2026", "tokens": 20150, "usd": 125000, "avgPrice": 6.20 }
+    ],
+    "cumulativeSinceMarch": {
+      "tokens": 85230,
+      "usd": 556000,
+      "avgPrice": 6.52
+    },
+    "stakingPower": {
+      "startDate": "2026-03-04",
+      "formula": "Staking Power = Dauer × Menge gestakter GMX (pro Sekunde berechnet)",
+      "loyaltyThreshold": 0.80,
+      "loyaltyBaselineDate": "2026-03-25",
+      "penaltyRule": "Faellt Balance unter 80% des Peaks seit 25.03. → gesamte Staking Power wird auf Null zurueckgesetzt",
+      "rewardShare": "Individuell / Gesamt-Netzwerk Staking Power"
+    },
+    "strategyComponents": [
+      {
+        "action": "LP-Rueckzug",
+        "detail": "~600K GMX aus Uniswap und Trader Joe LPs entfernt, um On-Chain-Verkaufspfade zu eliminieren"
+      },
+      {
+        "action": "CEX-Buyback",
+        "detail": "Woechentliche TWAP-Kaeufe auf Binance ueber GMX Labs Account. Deposit-Buy-Withdraw Zyklus."
+      },
+      {
+        "action": "Reward-Pause",
+        "detail": "Alle Staking-Rewards ausgesetzt bis GMX $90 erreicht. Gekaufte Token akkumulieren in Treasury."
+      },
+      {
+        "action": "Staking Power",
+        "detail": "Zeitgewichteter Loyalitaetsmechanismus bestimmt proportionalen Anteil bei Ausschuettung."
+      },
+      {
+        "action": "$5 Buy-Wall",
+        "detail": "Einmalige Treasury Buy-Wall: 1M GMX bei $5 fuer eine Woche deployed (18.-25. Maerz 2026)."
+      }
+    ]
+  },
+  "feeStructure": {
+    "source": "GMX Docs, Governance Forum, gmx-synthetics GitHub",
+    "trading": {
+      "description": "Open/Close Position Fees (V2.2, seit 06.01.2025)",
+      "balanceImproving": { "bps": 4, "percent": 0.04 },
+      "balanceWorsening": { "bps": 6, "percent": 0.06 },
+      "v1Comparison": { "bps": 10, "percent": 0.10, "note": "Flat fuer alle Trades" }
+    },
+    "swap": {
+      "normal": {
+        "balanceImproving": { "bps": 5, "percent": 0.05 },
+        "balanceWorsening": { "bps": 7, "percent": 0.07 }
+      },
+      "stablecoin": {
+        "balanceImproving": { "bps": 0.5, "percent": 0.005 },
+        "balanceWorsening": { "bps": 2, "percent": 0.02 }
+      },
+      "v1Comparison": "0.20% - 0.80% je nach Pool-Komposition"
+    },
+    "borrowing": {
+      "description": "Nur die dominante Seite (groessere OI) zahlt. Kink-Modell mit steigenden Raten bei hoher Auslastung.",
+      "model": "Kink (Optimal Usage) + Curve (Power) Model",
+      "note": "skipBorrowingFeeForSmallerSide = true"
+    },
+    "liquidation": {
+      "assetBacked": { "bps": 20, "note": "ETH/ETH, BTC/BTC Maerkte" },
+      "synthetic": { "bps": 30, "note": "SOL, ARB, LINK, DOGE etc." },
+      "highVolatility": { "bps": 45, "note": "Volatile/exotische Maerkte" }
+    },
+    "priceImpact": {
+      "description": "Trades die OI-Imbalance erhoehen → negativer Price Impact. Trades die OI balancieren → positiver Price Impact (Rebate).",
+      "formula": "(initialDiff)^exp × factor - (nextDiff)^exp × factor"
+    },
+    "execution": {
+      "description": "Keeper-Netzwerk fuehrt Orders im 2-Schritt-System aus. User zahlt Execution Fee (WETH/WAVAX) vorab, Ueberschuss wird erstattet.",
+      "note": "Gasless Transactions und Fee-Subsidies in Entwicklung (Q2 2026)"
+    },
+    "distribution": {
+      "v2": [
+        { "recipient": "GM Liquidity Providers", "share": 63.0 },
+        { "recipient": "GMX Staker (Buyback)", "share": 27.0 },
+        { "recipient": "Protocol Treasury", "share": 8.2 },
+        { "recipient": "Chainlink Oracles", "share": 1.2 }
+      ],
+      "v1": [
+        { "recipient": "GLP Holder", "share": 70.0 },
+        { "recipient": "GMX Staker", "share": 30.0 }
+      ],
+      "note": "Fees werden in nativen Trading-Tokens eingesammelt (WETH auf Arbitrum, WAVAX auf Avalanche). GM LPs erhalten Fees automatisch ueber steigenden Pool-NAV."
+    }
+  },
+  "source": "DeFiLlama API, GMX Docs, Governance Forum"
 }
