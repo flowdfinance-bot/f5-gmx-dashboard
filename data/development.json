@@ -1,0 +1,210 @@
+{
+  "lastUpdated": "2026-04-15",
+  "github": {
+    "org": "gmx-io",
+    "url": "https://github.com/gmx-io",
+    "repos": [
+      { "name": "gmx-interface", "stars": 230, "lang": "TypeScript", "lastPush": "2026-04-15", "description": "Frontend / Trading UI" },
+      { "name": "gmx-contracts", "stars": 420, "lang": "JavaScript", "lastPush": "2026-04-02", "description": "V1 Smart Contracts" },
+      { "name": "gmx-synthetics", "stars": 83, "lang": "TypeScript", "lastPush": "2026-04-01", "description": "V2 Smart Contracts (Synthetics)" },
+      { "name": "gmx-ai", "stars": 8, "lang": "n/a", "lastPush": "2026-03-20", "description": "AI Integration (neu)" },
+      { "name": "gmx-subgraph", "stars": 41, "lang": "TypeScript", "lastPush": "2026-02-09", "description": "The Graph Subgraphs" },
+      { "name": "gmx-integration-api", "stars": 7, "lang": "TypeScript", "lastPush": "2026-01-21", "description": "Integration API" },
+      { "name": "gmx-token-lz", "stars": 1, "lang": "TypeScript", "lastPush": "2025-12-30", "description": "LayerZero Token Bridge" },
+      { "name": "gmx-automation", "stars": 2, "lang": "TypeScript", "lastPush": "2025-10-21", "description": "Automation / Keeper Bots" }
+    ],
+    "monthlyCommits": {
+      "note": "Commits pro Monat (gmx-interface, groesstes Repo)",
+      "data": [
+        { "month": "2025-09", "commits": 288 },
+        { "month": "2025-10", "commits": 271 },
+        { "month": "2025-11", "commits": 314 },
+        { "month": "2025-12", "commits": 349 },
+        { "month": "2026-01", "commits": 404 },
+        { "month": "2026-02", "commits": 397 },
+        { "month": "2026-03", "commits": 335 },
+        { "month": "2026-04", "commits": 142 }
+      ]
+    },
+    "topContributors": ["xdev10", "gmxer", "qwinndev", "divhead", "timgmxio", "midas-myth", "gdev8317", "xvi10"]
+  },
+  "releases": [
+    {
+      "version": "V2.2",
+      "date": "2025-09-09",
+      "type": "Major Release",
+      "source": "https://github.com/gmx-io/gmx-synthetics/releases"
+    },
+    {
+      "version": "V2.1",
+      "date": "2024-06-17",
+      "type": "Major Release",
+      "source": "https://github.com/gmx-io/gmx-synthetics/releases"
+    }
+  ],
+  "technicalTimeline": [
+    {
+      "date": "2026-04-14",
+      "title": "GOLD & SILVER Maerkte + Fee-Reduktion",
+      "description": "Gold (XAU) und Silver (XAG) als neue handelbare Assets hinzugefuegt. Gebuehrenreduktion fuer diese Maerkte via Event-Banner angekuendigt. Max Leverage und Liquidationsparameter konfiguriert.",
+      "category": "Feature",
+      "repos": ["gmx-interface"],
+      "source": "https://github.com/gmx-io/gmx-interface/pull/2392"
+    },
+    {
+      "date": "2026-04-10",
+      "title": "Swap-Path-Logik ueberarbeitet",
+      "description": "Disabled Swap Route Markets Konfiguration eingefuehrt und Swap-Path-Logik aktualisiert. Net Rates Chart fuer Production deaktiviert.",
+      "category": "Improvement",
+      "repos": ["gmx-interface"],
+      "source": "https://github.com/gmx-io/gmx-interface/pull/2388"
+    },
+    {
+      "date": "2026-04-10",
+      "title": "Staking Power Minor Fixes",
+      "description": "Korrekturen am neuen Staking Power System (Power Accrual), das die pausierte Reward-Verteilung bis $90 steuert.",
+      "category": "Fix",
+      "repos": ["gmx-interface"],
+      "source": "https://github.com/gmx-io/gmx-interface/pull/2357"
+    },
+    {
+      "date": "2026-03-20",
+      "title": "GMX AI Repo erstellt",
+      "description": "Neues Repository 'gmx-ai' mit 15 Commits im Maerz 2026 erstellt. Details noch nicht oeffentlich, deutet auf AI-Integration in der Trading-UI hin.",
+      "category": "Feature",
+      "repos": ["gmx-ai"],
+      "source": "https://github.com/gmx-io/gmx-ai"
+    },
+    {
+      "date": "2026-03-16",
+      "title": "TRUMP Markt OI Caps angepasst",
+      "description": "Open Interest Limits fuer den TRUMP Perp-Markt aktualisiert. Rollen (Roles) im Smart Contract angepasst.",
+      "category": "Config",
+      "repos": ["gmx-synthetics"],
+      "source": "https://github.com/gmx-io/gmx-synthetics"
+    },
+    {
+      "date": "2026-02-09",
+      "title": "Subgraph Updates fuer neue Maerkte",
+      "description": "The Graph Subgraphs aktualisiert, um neue Markttypen und Events korrekt zu indexieren.",
+      "category": "Improvement",
+      "repos": ["gmx-subgraph"],
+      "source": "https://github.com/gmx-io/gmx-subgraph"
+    },
+    {
+      "date": "2026-01-21",
+      "title": "Integration API Updates",
+      "description": "Aktualisierungen an der Integration API fuer Third-Party-Entwickler und Protokoll-Integrationen.",
+      "category": "Improvement",
+      "repos": ["gmx-integration-api"],
+      "source": "https://github.com/gmx-io/gmx-integration-api"
+    },
+    {
+      "date": "2025-12-30",
+      "title": "LayerZero Token Bridge Deployment",
+      "description": "GMX Token via LayerZero cross-chain verfuegbar gemacht. Ermoeglicht GM/GLV Token-Kauf von Base, BNB Chain, Ethereum und weiteren Chains.",
+      "category": "Feature",
+      "repos": ["gmx-token-lz"],
+      "source": "https://gmxio.substack.com/p/gmxs-liquidity-tokens-are-now-multichain"
+    },
+    {
+      "date": "2025-11-24",
+      "title": "MKR und AI16Z Maerkte deaktiviert",
+      "description": "Maker (MKR) und AI16Z Perp-Maerkte aufgrund unzureichender Liquiditaet oder Risikobewertung deaktiviert. Markt-Konfigurationen und OI Caps aktualisiert.",
+      "category": "Config",
+      "repos": ["gmx-synthetics"],
+      "source": "https://github.com/gmx-io/gmx-synthetics/pull/284"
+    },
+    {
+      "date": "2025-09-29",
+      "title": "GMX Multichain Launch auf Base",
+      "description": "GMX Multichain geht live mit Base als erster zusaetzlicher Chain. 90+ Perp-Maerkte mit GMX Express (Trade-Execution unter 1 Sekunde cross-chain). Partnerschaft mit LayerZero fuer Cross-Chain-Infrastruktur. Weitere Chains geplant: BNB Chain, Berachain, Ethereum, Sonic, Linea, ApeChain.",
+      "category": "Launch",
+      "repos": ["gmx-interface", "gmx-synthetics"],
+      "source": "https://gmxio.substack.com/p/gmx-multichain-is-now-live-unlocking"
+    },
+    {
+      "date": "2025-09-09",
+      "title": "V2.2 Smart Contracts Release",
+      "description": "Major Release mit zahlreichen Aenderungen: Gasless Router Digests, Capped Price Impact mit Net Impact, Pending Price Impact auf Positions, automatische Rebate-Claims, Liquidations-Logik auf minCollateralFactorForLiquidation umgestellt, Callback-Mechanismus ueberarbeitet, Subaccount Integration IDs, Funding basierend auf Paying-Side Size.",
+      "category": "Release",
+      "repos": ["gmx-synthetics"],
+      "source": "https://github.com/gmx-io/gmx-synthetics/releases/tag/v2.2"
+    },
+    {
+      "date": "2025-07-21",
+      "title": "Guardian Security Audit & V1 Patches",
+      "description": "Guardian Audit Report veroeffentlicht. Risk Oracle Keeper hinzugefuegt. Timelock.signalUnstakeAndBurnGlp Funktion eingebaut (Post-Exploit-Sicherheitsmassnahme).",
+      "category": "Security",
+      "repos": ["gmx-contracts"],
+      "source": "https://github.com/gmx-io/gmx-contracts/pull/160"
+    },
+    {
+      "date": "2025-07-09",
+      "title": "$42M Reentrancy Exploit & Patch",
+      "description": "Reentrancy-Schwachstelle in PositionManager.executeDecreaseOrder() (V1) ausgenutzt. Angreifer manipulierte GLP-Pricing ueber zirkulaere Beziehung zwischen Short-Positionen und AUM-Berechnung. $40M zurueckgegeben nach $5M White-Hat-Bounty.",
+      "category": "Security",
+      "repos": ["gmx-contracts"],
+      "source": "https://www.halborn.com/blog/post/explained-the-gmx-hack-july-2025"
+    },
+    {
+      "date": "2024-06-17",
+      "title": "V2.1 Release",
+      "description": "Support fuer Chainlink Timestamp-basierte Data Streams. Flexibleres Oracle-Provider-System. Deposit Cap Validierung bei positivem Price Impact entfernt.",
+      "category": "Release",
+      "repos": ["gmx-synthetics"],
+      "source": "https://github.com/gmx-io/gmx-synthetics/releases/tag/v2.1"
+    }
+  ],
+  "upcomingFeatures": [
+    {
+      "name": "Gasless Transactions",
+      "version": "V2.2 (Frontend)",
+      "status": "In Entwicklung",
+      "eta": "Q2 2026",
+      "description": "User signieren nur Wallet-Nachrichten. Trades werden via Keeper-Netzwerke (Gelato) gebroadcastet."
+    },
+    {
+      "name": "Network Fee Subsidies",
+      "version": "V2.2",
+      "status": "Snapshot Vote ausstehend",
+      "eta": "Q2 2026",
+      "description": "Fee-Pool aus Open/Close-Gebuehren subventioniert Netzwerkkosten fuer User."
+    },
+    {
+      "name": "Cross-Collateral",
+      "version": "V2.2",
+      "status": "In Entwicklung",
+      "eta": "2026",
+      "description": "USDC als Collateral in Single-Token-Pools (ETH, BTC, SOL) verwenden."
+    },
+    {
+      "name": "Net OI Limits",
+      "version": "V2.2",
+      "status": "Geplant",
+      "eta": "2026",
+      "description": "Max-Differenz zwischen Long/Short OI begrenzen, hoehere Reserve-Faktoren ermoeglichen."
+    },
+    {
+      "name": "Cross-Margin",
+      "version": "V2.3",
+      "status": "Geplant",
+      "eta": "Spaet 2026",
+      "description": "Alle Positionen teilen Collateral. Positive PnL als Margin fuer andere Positionen nutzbar."
+    },
+    {
+      "name": "Market Groups",
+      "version": "V2.3",
+      "status": "Geplant",
+      "eta": "Spaet 2026",
+      "description": "Aehnliche Maerkte (z.B. ETH/USD) unter einer Gruppe zusammenfassen. Vereinheitlichte Liquiditaet und Funding Rates."
+    },
+    {
+      "name": "Weitere Chain-Expansionen",
+      "version": "Multichain",
+      "status": "Rollout laufend",
+      "eta": "Laufend",
+      "description": "Nach Base: BNB Chain, Berachain, Ethereum Mainnet, Sonic, Linea, ApeChain geplant."
+    }
+  ]
+}

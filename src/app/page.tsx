@@ -7,6 +7,7 @@ import CompetitionAnalysis from "@/components/CompetitionAnalysis";
 import AnalystOpinions from "@/components/AnalystOpinions";
 import NewsTimeline from "@/components/NewsTimeline";
 import Risks from "@/components/Risks";
+import TechnicalDevelopment from "@/components/TechnicalDevelopment";
 import Footer from "@/components/Footer";
 
 import marketData from "../../data/market.json";
@@ -14,6 +15,7 @@ import protocolData from "../../data/protocol.json";
 import tvlHistory from "../../data/tvl-history.json";
 import competitorsData from "../../data/competitors.json";
 import newsData from "../../data/news.json";
+import developmentData from "../../data/development.json";
 
 export default function Home() {
   return (
@@ -32,6 +34,7 @@ export default function Home() {
         <CompetitionAnalysis data={competitorsData} />
         <AnalystOpinions opinions={newsData.analystOpinions} />
         <NewsTimeline events={newsData.events} />
+        <TechnicalDevelopment data={developmentData} />
         <Risks />
       </div>
 
