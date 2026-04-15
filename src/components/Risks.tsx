@@ -21,6 +21,13 @@ export default function Risks() {
           source: "F5 Crypto IC-Teaser (Feb 2023)",
         },
         {
+          name: "Admin-kontrolliert (Timelock/Multisig)",
+          severity: "Hoch",
+          detail:
+            "GMX V2 ist nicht immutable. Timelock-/Rollen-/Multisig-System mit ConfigTimelockController und GovTimelockController. Admins koennen Parameter aendern (Fees, OI Caps, Leverage), Tokens whitelisten, Maerkte deaktivieren und Funktionen einfrieren. Keine EOA haelt direkt eine Controller-Rolle, aber der Einfluss der Timelock-Admins ist erheblich.",
+          source: "GMX Docs, gmx-synthetics Repo, Arbiscan",
+        },
+        {
           name: "Oracle/Preismanipulation",
           severity: "Mittel",
           detail:
@@ -46,6 +53,13 @@ export default function Risks() {
           detail:
             "Rewards werden seit Maerz 2026 akkumuliert und erst bei $90 GMX-Preis verteilt. Aktuelle Preis: $6.11 - ein 15x noetig. Reduziert Staking-Anreiz massiv.",
           source: "GMX Governance (Maerz 2026)",
+        },
+        {
+          name: "Token fuer Kernfunktionen nicht noetig",
+          severity: "Mittel",
+          detail:
+            "Trading, Swaps, Liquidity Provision (GM/GLV) und Cross-Chain funktionieren vollstaendig ohne GMX-Token. Der Token ist primaer ein Governance- und Revenue-Sharing-Instrument. Die Wertanbindung ist indirekt und governance-abhaengig.",
+          source: "GMX Docs, F5 Crypto Analyse",
         },
         {
           name: "Kein Burn-Mechanismus",

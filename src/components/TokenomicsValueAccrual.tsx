@@ -115,6 +115,25 @@ interface TokenomicsProps {
         note: string;
       };
     };
+    tokenFunctions?: {
+      requiresToken: { function: string; detail: string }[];
+      worksWithoutToken: { function: string; detail: string }[];
+      assessment: string;
+    };
+    valuation?: {
+      annualizedFees: number;
+      annualizedRevenue: number;
+      annualizedProfit: number;
+      revenueToMcap: number;
+      profitToMcap: number;
+      feeYield: number;
+      comparison: {
+        name: string;
+        revToMcap: number;
+        profitToMcap: number | null;
+        feeYield: number;
+      }[];
+    };
   };
 }
 
@@ -776,6 +795,146 @@ export default function TokenomicsValueAccrual({
 
           <p className="text-xs text-gray-500 mt-3">
             Quellen: GMX Docs, Governance Forum, gmx-synthetics GitHub, DeFiLlama
+          </p>
+        </div>
+      )}
+
+      {/* Token Functions */}
+      {protocol.tokenFunctions && (
+        <div className="card mt-6">
+          <h3 className="text-base font-semibold text-white mb-4">
+            Token-Integration: Was braucht GMX, was nicht?
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <h4 className="text-sm font-medium text-green-400 mb-3 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                Erfordert GMX-Token
+              </h4>
+              <div className="space-y-2">
+                {protocol.tokenFunctions.requiresToken.map((fn) => (
+                  <div key={fn.function} className="bg-green-900/5 rounded-lg p-3 border border-green-800/20">
+                    <p className="text-xs font-medium text-white mb-0.5">{fn.function}</p>
+                    <p className="text-[11px] text-gray-400">{fn.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-gray-400 mb-3 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gray-500" />
+                Funktioniert ohne GMX-Token
+              </h4>
+              <div className="space-y-2">
+                {protocol.tokenFunctions.worksWithoutToken.map((fn) => (
+                  <div key={fn.function} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
+                    <p className="text-xs font-medium text-white mb-0.5">{fn.function}</p>
+                    <p className="text-[11px] text-gray-400">{fn.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-3">
+            <p className="text-xs text-yellow-400 font-medium mb-1">Einschaetzung</p>
+            <p className="text-xs text-gray-300">
+              {protocol.tokenFunctions.assessment}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Valuation Metrics */}
+      {protocol.valuation && (
+        <div className="card mt-6">
+          <h3 className="text-base font-semibold text-white mb-4">
+            Bewertungskennzahlen
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+            <div className="bg-[#0a0a0f] rounded-lg p-4 border border-[#1e1e2e] text-center">
+              <p className="text-xs text-gray-500 mb-1">Ann. Fees</p>
+              <p className="text-lg font-bold text-white">
+                ${(protocol.valuation.annualizedFees / 1_000_000).toFixed(1)}M
+              </p>
+              <p className="text-[11px] text-gray-600">Gesamte Protokollgebuehren</p>
+            </div>
+            <div className="bg-[#0a0a0f] rounded-lg p-4 border border-[#1e1e2e] text-center">
+              <p className="text-xs text-gray-500 mb-1">Ann. Revenue</p>
+              <p className="text-lg font-bold text-green-400">
+                ${(protocol.valuation.annualizedRevenue / 1_000_000).toFixed(1)}M
+              </p>
+              <p className="text-[11px] text-gray-600">An Token-Holder (27%)</p>
+            </div>
+            <div className="bg-[#0a0a0f] rounded-lg p-4 border border-[#1e1e2e] text-center">
+              <p className="text-xs text-gray-500 mb-1">Revenue / MCap</p>
+              <p className="text-lg font-bold text-blue-400">
+                {(protocol.valuation.revenueToMcap * 100).toFixed(1)}%
+              </p>
+              <p className="text-[11px] text-gray-600">Implizierte Fee-Rendite</p>
+            </div>
+            <div className="bg-[#0a0a0f] rounded-lg p-4 border border-[#1e1e2e] text-center">
+              <p className="text-xs text-gray-500 mb-1">Profit / MCap</p>
+              <p className="text-lg font-bold text-yellow-400">
+                {(protocol.valuation.profitToMcap * 100).toFixed(1)}%
+              </p>
+              <p className="text-[11px] text-gray-600">Nach geschaetzten Kosten</p>
+            </div>
+          </div>
+
+          {/* Comparison Table */}
+          <h4 className="text-sm font-medium text-gray-300 mb-3">
+            Bewertungsvergleich mit Wettbewerbern
+          </h4>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-[#1e1e2e]">
+                  <th className="text-left py-2 px-2 text-gray-400 font-medium text-xs">Protokoll</th>
+                  <th className="text-right py-2 px-2 text-gray-400 font-medium text-xs">Revenue / MCap</th>
+                  <th className="text-right py-2 px-2 text-gray-400 font-medium text-xs">Profit / MCap</th>
+                  <th className="text-right py-2 px-2 text-gray-400 font-medium text-xs">Fee Yield</th>
+                </tr>
+              </thead>
+              <tbody>
+                {protocol.valuation.comparison.map((comp) => (
+                  <tr
+                    key={comp.name}
+                    className={`border-b border-[#1e1e2e] ${
+                      comp.name === "GMX" ? "bg-blue-900/10" : "hover:bg-[#16161f]"
+                    }`}
+                  >
+                    <td className="py-2 px-2">
+                      <span className={comp.name === "GMX" ? "text-blue-400 font-semibold text-xs" : "text-white text-xs"}>
+                        {comp.name}
+                      </span>
+                    </td>
+                    <td className="py-2 px-2 text-right">
+                      <span className={`text-xs font-medium ${
+                        comp.revToMcap >= 0.1 ? "text-green-400" : "text-gray-300"
+                      }`}>
+                        {(comp.revToMcap * 100).toFixed(1)}%
+                      </span>
+                    </td>
+                    <td className="py-2 px-2 text-right text-xs text-gray-300">
+                      {comp.profitToMcap != null
+                        ? `${(comp.profitToMcap * 100).toFixed(1)}%`
+                        : "—"}
+                    </td>
+                    <td className="py-2 px-2 text-right">
+                      <span className={`text-xs font-medium ${
+                        comp.feeYield >= 10 ? "text-green-400" : "text-gray-300"
+                      }`}>
+                        {comp.feeYield.toFixed(1)}%
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">
+            Revenue = Anteil der Fees der an Token-Holder fliesst | Fee Yield = Ann. Revenue / MCap |
+            Quellen: DeFiLlama, CoinGecko (Stand {new Date().toISOString().slice(0, 10)})
           </p>
         </div>
       )}
