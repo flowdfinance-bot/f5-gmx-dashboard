@@ -1,0 +1,91 @@
+{
+  "lastUpdated": "2026-04-15",
+  "source": "DeFiLlama, CoinGecko, Web Research",
+  "volumeMarketShare": {
+    "note": "Approximate perp DEX volume market share Q1 2026",
+    "data": [
+      { "name": "Hyperliquid", "share": 44 },
+      { "name": "Lighter", "share": 15 },
+      { "name": "Aster", "share": 12 },
+      { "name": "Jupiter Perps", "share": 8 },
+      { "name": "GMX", "share": 3 },
+      { "name": "dYdX", "share": 3 },
+      { "name": "Vertex", "share": 3 },
+      { "name": "Others", "share": 12 }
+    ]
+  },
+  "comparison": [
+    {
+      "name": "GMX",
+      "chain": "Arbitrum, Avalanche, Solana",
+      "tvl": 346600000,
+      "marketCap": 63400000,
+      "model": "Liquidity Pool (GM/GLP)",
+      "feeDistribution": "27% Staker / 63% LP / 10% Treasury",
+      "maxLeverage": "100x",
+      "buyback": "12.9% of supply bought back",
+      "strength": "Hoechstes TVL, Battle-tested, Real Yield in ETH",
+      "weakness": "Verliert Volumen-Marktanteil, Staking-Rewards pausiert"
+    },
+    {
+      "name": "Hyperliquid",
+      "chain": "Hyperliquid L1",
+      "tvl": 500000000,
+      "marketCap": 5000000000,
+      "model": "Order Book (eigene L1)",
+      "feeDistribution": "Buyback & Burn von HYPE",
+      "maxLeverage": "50x",
+      "buyback": "Aktives Buyback & Burn Programm",
+      "strength": "Dominanter Marktfuehrer, CEX-artige Geschwindigkeit, VC-frei",
+      "weakness": "Single-Chain, junges Oekosystem"
+    },
+    {
+      "name": "dYdX v4",
+      "chain": "dYdX Chain (Cosmos)",
+      "tvl": 250000000,
+      "marketCap": 800000000,
+      "model": "Order Book (Cosmos Chain)",
+      "feeDistribution": "100% an Staker/Validatoren",
+      "maxLeverage": "20x",
+      "buyback": "Kein explizites Buyback",
+      "strength": "100% Fee-Verteilung, souveraene Chain, MEV-resistent",
+      "weakness": "Cosmos-Fragmentierung, weniger Retail-Nutzer"
+    },
+    {
+      "name": "Jupiter Perps",
+      "chain": "Solana",
+      "tvl": 300000000,
+      "marketCap": 2000000000,
+      "model": "Liquidity Pool (JLP)",
+      "feeDistribution": "75% JLP-Holder / 25% Treasury",
+      "maxLeverage": "100x",
+      "buyback": "JUP Buyback Programm aktiv",
+      "strength": "Solana-Speed, DEX-Aggregator-Effekt, guenstige Gebuehren",
+      "weakness": "Solana-Netzwerkrisiko, Oracle-Abhaengigkeit"
+    },
+    {
+      "name": "Vertex",
+      "chain": "Arbitrum, Blast",
+      "tvl": 100000000,
+      "marketCap": 150000000,
+      "model": "Hybrid (Off-chain Sequencer)",
+      "feeDistribution": "Fees an VRTX Staker",
+      "maxLeverage": "20x",
+      "buyback": "Kein explizites Buyback",
+      "strength": "Cross-Margin, unified Account, niedrige Gebuehren",
+      "weakness": "Kleinere Brand, Sequencer-Zentralisierung"
+    },
+    {
+      "name": "Aevo",
+      "chain": "Aevo L2 (OP Stack)",
+      "tvl": 80000000,
+      "marketCap": 120000000,
+      "model": "Order Book (eigene L2)",
+      "feeDistribution": "Fees + Options-Spreads",
+      "maxLeverage": "20x",
+      "buyback": "Kein explizites Buyback",
+      "strength": "Options + Perps kombiniert, institutionell",
+      "weakness": "Nischenmarkt, niedrigeres Volumen"
+    }
+  ]
+}

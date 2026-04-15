@@ -1,0 +1,45 @@
+{
+  "lastUpdated": "2026-04-15",
+  "tvl": 346600000,
+  "tvlBreakdown": {
+    "arbitrum": 244000000,
+    "arbitrumStaking": 38900000,
+    "avalanche": 13200000,
+    "avalancheStaking": 1300000,
+    "megaeth": 8200000,
+    "botanix": 38500
+  },
+  "chains": ["Arbitrum", "Avalanche", "Solana", "MegaETH", "Botanix"],
+  "description": "Leading onchain exchange for perpetual and spot trading with deep liquidity, low fees, and multi-chain support.",
+  "category": "Derivatives",
+  "fees": {
+    "daily": 178882,
+    "weekly": 723133,
+    "monthly": 2483336,
+    "allTime": 456341994
+  },
+  "feeDistribution": {
+    "v2": {
+      "gmxStakers": 27,
+      "gmLiquidityProviders": 63,
+      "treasury": 10
+    },
+    "v1": {
+      "gmxStakers": 30,
+      "glpHolders": 70
+    }
+  },
+  "staking": {
+    "currentAPR": "Accumulating",
+    "historicalAPRRange": "4-30%",
+    "rewardsPausedUntil": "$90 GMX price target",
+    "rewardsPausedSince": "2026-03-04"
+  },
+  "buyback": {
+    "totalBoughtBack": 1330000,
+    "totalSpent": 20860000,
+    "percentOfSupply": 12.9,
+    "status": "Completed - now in power accrual phase"
+  },
+  "source": "DeFiLlama API, GMX Docs"
+}

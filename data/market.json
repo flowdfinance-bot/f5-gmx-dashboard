@@ -1,0 +1,21 @@
+{
+  "lastUpdated": "2026-04-15",
+  "price": 6.11,
+  "priceChange24h": 0.45,
+  "priceChange7d": -0.85,
+  "priceChange30d": -9.76,
+  "priceChange1y": -60.19,
+  "marketCap": 63410339,
+  "fdv": 63410339,
+  "volume24h": 5159389,
+  "circulatingSupply": 10384106,
+  "totalSupply": 10384106,
+  "maxSupply": 13250000,
+  "ath": 91.07,
+  "athDate": "2023-04-18",
+  "atl": 5.41,
+  "atlDate": "2026-02-06",
+  "marketCapRank": 381,
+  "mcapToTvlRatio": 0.24,
+  "source": "CoinGecko API"
+}

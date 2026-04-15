@@ -1,0 +1,145 @@
+{
+  "lastUpdated": "2026-04-15",
+  "events": [
+    {
+      "date": "2026-04",
+      "title": "GMX DAO CEO-Suche - Deadline",
+      "description": "Die GMX DAO sucht einen CEO mit Frist Ende April 2026. Vollstaendige Organisationsrestrukturierung bis Juni 2026 geplant.",
+      "impact": "Neutral",
+      "source": "https://gov.gmx.io",
+      "sourceLabel": "GMX Governance Forum"
+    },
+    {
+      "date": "2026-03",
+      "title": "Staking-Rewards Pause bis $90",
+      "description": "DAO-Abstimmung pausiert Staking-Rewards. Zurueckgekaufte GMX werden erst bei einem Preis von $90 an Staker verteilt. Power Accrual Phase beginnt am 4. Maerz 2026.",
+      "impact": "Bearish",
+      "source": "https://snapshot.org/#/gmx.eth",
+      "sourceLabel": "GMX Snapshot Governance"
+    },
+    {
+      "date": "2026-02",
+      "title": "Allzeittief bei $5.41",
+      "description": "GMX-Token erreicht mit $5.41 ein neues Allzeittief, ein Rueckgang von ueber 94% vom ATH.",
+      "impact": "Bearish",
+      "source": "https://www.coingecko.com/en/coins/gmx",
+      "sourceLabel": "CoinGecko"
+    },
+    {
+      "date": "2026-01",
+      "title": "V2.2 Entwicklung laeuft",
+      "description": "Gasless Transactions, Network Fee Subsidies und Multichain-Support (Cross-Chain-Trading ohne Netzwerkwechsel) in Entwicklung.",
+      "impact": "Bullish",
+      "source": "https://gmxio.substack.com/p/gmx-development-plan-for-2025",
+      "sourceLabel": "GMX Substack"
+    },
+    {
+      "date": "2025-12",
+      "title": "Buyback-Programm abgeschlossen",
+      "description": "GMX hat 1.33 Millionen Token (12.9% des Supplies) fuer $20.86 Millionen zurueckgekauft. Hoechster Anteil am Supply aller Protokolle.",
+      "impact": "Bullish",
+      "source": "https://www.coingecko.com/research/publications/token-buybacks",
+      "sourceLabel": "CoinGecko Research"
+    },
+    {
+      "date": "2025-10",
+      "title": "Expansion auf MegaETH und Botanix",
+      "description": "GMX expandiert auf neue Chains: MegaETH ($8.2M TVL) und Botanix (Bitcoin L2).",
+      "impact": "Bullish",
+      "source": "https://defillama.com/protocol/gmx",
+      "sourceLabel": "DeFiLlama"
+    },
+    {
+      "date": "2025-07",
+      "title": "$42M Exploit durch Reentrancy-Angriff",
+      "description": "Angreifer nutzt Reentrancy-Luecke in GMX V1 PositionManager.executeDecreaseOrder() aus. $42M gestohlen, $40M zurueckgegeben nach $5M Bounty.",
+      "impact": "Bearish",
+      "source": "https://www.coindesk.com/business/2025/07/09/decentralized-exchange-gmx-exploited-for-usd42m-offers-hacker-10-white-hat-bounty",
+      "sourceLabel": "CoinDesk"
+    },
+    {
+      "date": "2025-07",
+      "title": "Exploit-Gelder zurueckgegeben",
+      "description": "Exploiter gibt $40M zurueck, behaelt $5M als White-Hat-Bounty (10%). GMX-Token steigt nach Bekanntgabe.",
+      "impact": "Bullish",
+      "source": "https://www.coindesk.com/markets/2025/07/11/gmx-exploiter-return-usd40m-days-after-hack-token-zooms-higher",
+      "sourceLabel": "CoinDesk"
+    },
+    {
+      "date": "2025-06",
+      "title": "Solana-Expansion angekuendigt",
+      "description": "GMX kuendigt Expansion auf Solana an, Teil der Multichain-Strategie fuer V2.2.",
+      "impact": "Bullish",
+      "source": "https://gmxio.substack.com",
+      "sourceLabel": "GMX Substack"
+    },
+    {
+      "date": "2025-03",
+      "title": "GMX Development Plan 2025 veroeffentlicht",
+      "description": "Detaillierter Plan fuer V2.2 (Gasless, Multichain, Cross-Collateral) und V2.3 (Cross-Margin, Market Groups). Solana und EVM-Expansion geplant.",
+      "impact": "Bullish",
+      "source": "https://gmxio.substack.com/p/gmx-development-plan-for-2025",
+      "sourceLabel": "GMX Substack"
+    },
+    {
+      "date": "2024-12",
+      "title": "GLV (GMX Liquidity Vaults) eingefuehrt",
+      "description": "Neuer Liquiditaetsmechanismus fuer V2, erlaubt automatisiertes Management von GM-Pool-Positionen.",
+      "impact": "Bullish",
+      "source": "https://docs.gmx.io",
+      "sourceLabel": "GMX Docs"
+    },
+    {
+      "date": "2024-06",
+      "title": "Hyperliquid ueberholt GMX im Volumen",
+      "description": "Hyperliquid wird zum volumenstarksten Perp DEX und verdraengt GMX von der Spitzenposition.",
+      "impact": "Bearish",
+      "source": "https://defillama.com/perps",
+      "sourceLabel": "DeFiLlama"
+    }
+  ],
+  "analystOpinions": [
+    {
+      "source": "Messari Research",
+      "date": "2024-2025",
+      "sentiment": "Neutral",
+      "thesis": "GMX ist ein echtes 'productive asset' mit starker Revenue-Generierung, aber Hyperliquid's Volumendominanz ist ein struktureller Gegenwind.",
+      "link": "https://messari.io/project/gmx"
+    },
+    {
+      "source": "Delphi Digital",
+      "date": "2024-2025",
+      "sentiment": "Neutral",
+      "thesis": "Cash-Flow-Protokoll mit echtem Yield, aber AMM-basierte Perps haben strukturelle Grenzen gegenueber Order-Book-DEXs bei professionellem Flow.",
+      "link": "https://delphidigital.io/"
+    },
+    {
+      "source": "The Block Research",
+      "date": "2024-2025",
+      "sentiment": "Neutral",
+      "thesis": "Blue Chip der dezentralen Perps mit defensivem TVL-Graben, aber Revenue-Wachstum unter Druck durch Hyperliquid und Jupiter.",
+      "link": "https://www.theblock.co/research"
+    },
+    {
+      "source": "DeFi Made Here (Twitter/X)",
+      "date": "2024-2025",
+      "sentiment": "Bullish",
+      "thesis": "GMX ist auf P/E-Basis unterbewertet gegenueber Hyperliquid; Real Yield in ETH ist ein Hard-Money-Argument.",
+      "link": "https://x.com"
+    },
+    {
+      "source": "Stacy Muur (Twitter/X)",
+      "date": "2026",
+      "sentiment": "Bearish",
+      "thesis": "GMX auf C-Tier herabgestuft im Perp DEX Ranking. Hyperliquid, EdgeX und Lighter deutlich bevorzugt.",
+      "link": "https://x.com/stacy_muur/status/1992586960536527039"
+    },
+    {
+      "source": "CoinMarketCap AI Analysis",
+      "date": "2026-04",
+      "sentiment": "Neutral",
+      "thesis": "Konsens vorsichtig bullisch - fundamentale Resilienz und strategische Buybacks bei Multi-Jahres-Tiefs. $6 als Akkumulationszone betrachtet.",
+      "link": "https://coinmarketcap.com/cmc-ai/gmx/latest-updates/"
+    }
+  ]
+}
