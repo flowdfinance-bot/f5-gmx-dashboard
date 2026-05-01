@@ -1,22 +1,23 @@
 {
-  "lastUpdated": "2026-04-15",
-  "tvl": 346600000,
+  "lastUpdated": "2026-05-01",
+  "tvl": 241955226,
   "tvlBreakdown": {
-    "arbitrum": 244000000,
-    "arbitrumStaking": 38900000,
-    "avalanche": 13200000,
-    "avalancheStaking": 1300000,
-    "megaeth": 8200000,
-    "botanix": 38500
+    "arbitrumstaking": 46257472,
+    "arbitrum": 220066540,
+    "avalanchestaking": 1572834,
+    "avalanche": 13223507,
+    "staking": 47830306,
+    "botanix": 17730,
+    "megaeth": 8647448
   },
-  "chains": ["Arbitrum", "Avalanche", "Solana", "MegaETH", "Botanix"],
+  "chains": [],
   "description": "Leading onchain exchange for perpetual and spot trading with deep liquidity, low fees, and multi-chain support.",
   "category": "Derivatives",
   "fees": {
-    "daily": 178882,
-    "weekly": 723133,
-    "monthly": 2483336,
-    "allTime": 456341994
+    "daily": 41147,
+    "weekly": 361461,
+    "monthly": 2304954,
+    "allTime": 457535840
   },
   "feeDistribution": {
     "v2": {
@@ -62,11 +63,36 @@
       "substackUrl": "https://gmxio.substack.com/p/governance-update-a-strategic-plan"
     },
     "weeklyBuybacks": [
-      { "period": "KW 2 Jan 2026", "tokens": 16800, "usd": null, "avgPrice": null },
-      { "period": "11-17 Maerz 2026", "tokens": 16250, "usd": 111000, "avgPrice": 6.83 },
-      { "period": "18-24 Maerz 2026", "tokens": 18500, "usd": 120000, "avgPrice": 6.49 },
-      { "period": "25-31 Maerz 2026", "tokens": 13530, "usd": 89000, "avgPrice": 6.58 },
-      { "period": "01-07 Apr 2026", "tokens": 20150, "usd": 125000, "avgPrice": 6.20 }
+      {
+        "period": "KW 2 Jan 2026",
+        "tokens": 16800,
+        "usd": null,
+        "avgPrice": null
+      },
+      {
+        "period": "11-17 Maerz 2026",
+        "tokens": 16250,
+        "usd": 111000,
+        "avgPrice": 6.83
+      },
+      {
+        "period": "18-24 Maerz 2026",
+        "tokens": 18500,
+        "usd": 120000,
+        "avgPrice": 6.49
+      },
+      {
+        "period": "25-31 Maerz 2026",
+        "tokens": 13530,
+        "usd": 89000,
+        "avgPrice": 6.58
+      },
+      {
+        "period": "01-07 Apr 2026",
+        "tokens": 20150,
+        "usd": 125000,
+        "avgPrice": 6.2
+      }
     ],
     "cumulativeSinceMarch": {
       "tokens": 85230,
@@ -76,7 +102,7 @@
     "stakingPower": {
       "startDate": "2026-03-04",
       "formula": "Staking Power = Dauer × Menge gestakter GMX (pro Sekunde berechnet)",
-      "loyaltyThreshold": 0.80,
+      "loyaltyThreshold": 0.8,
       "loyaltyBaselineDate": "2026-03-25",
       "penaltyRule": "Faellt Balance unter 80% des Peaks seit 25.03. → gesamte Staking Power wird auf Null zurueckgesetzt",
       "rewardShare": "Individuell / Gesamt-Netzwerk Staking Power"
@@ -108,18 +134,40 @@
     "source": "GMX Docs, Governance Forum, gmx-synthetics GitHub",
     "trading": {
       "description": "Open/Close Position Fees (V2.2, seit 06.01.2025)",
-      "balanceImproving": { "bps": 4, "percent": 0.04 },
-      "balanceWorsening": { "bps": 6, "percent": 0.06 },
-      "v1Comparison": { "bps": 10, "percent": 0.10, "note": "Flat fuer alle Trades" }
+      "balanceImproving": {
+        "bps": 4,
+        "percent": 0.04
+      },
+      "balanceWorsening": {
+        "bps": 6,
+        "percent": 0.06
+      },
+      "v1Comparison": {
+        "bps": 10,
+        "percent": 0.1,
+        "note": "Flat fuer alle Trades"
+      }
     },
     "swap": {
       "normal": {
-        "balanceImproving": { "bps": 5, "percent": 0.05 },
-        "balanceWorsening": { "bps": 7, "percent": 0.07 }
+        "balanceImproving": {
+          "bps": 5,
+          "percent": 0.05
+        },
+        "balanceWorsening": {
+          "bps": 7,
+          "percent": 0.07
+        }
       },
       "stablecoin": {
-        "balanceImproving": { "bps": 0.5, "percent": 0.005 },
-        "balanceWorsening": { "bps": 2, "percent": 0.02 }
+        "balanceImproving": {
+          "bps": 0.5,
+          "percent": 0.005
+        },
+        "balanceWorsening": {
+          "bps": 2,
+          "percent": 0.02
+        }
       },
       "v1Comparison": "0.20% - 0.80% je nach Pool-Komposition"
     },
@@ -129,9 +177,18 @@
       "note": "skipBorrowingFeeForSmallerSide = true"
     },
     "liquidation": {
-      "assetBacked": { "bps": 20, "note": "ETH/ETH, BTC/BTC Maerkte" },
-      "synthetic": { "bps": 30, "note": "SOL, ARB, LINK, DOGE etc." },
-      "highVolatility": { "bps": 45, "note": "Volatile/exotische Maerkte" }
+      "assetBacked": {
+        "bps": 20,
+        "note": "ETH/ETH, BTC/BTC Maerkte"
+      },
+      "synthetic": {
+        "bps": 30,
+        "note": "SOL, ARB, LINK, DOGE etc."
+      },
+      "highVolatility": {
+        "bps": 45,
+        "note": "Volatile/exotische Maerkte"
+      }
     },
     "priceImpact": {
       "description": "Trades die OI-Imbalance erhoehen → negativer Price Impact. Trades die OI balancieren → positiver Price Impact (Rebate).",
@@ -143,14 +200,32 @@
     },
     "distribution": {
       "v2": [
-        { "recipient": "GM Liquidity Providers", "share": 63.0 },
-        { "recipient": "GMX Staker (Buyback)", "share": 27.0 },
-        { "recipient": "Protocol Treasury", "share": 8.2 },
-        { "recipient": "Chainlink Oracles", "share": 1.2 }
+        {
+          "recipient": "GM Liquidity Providers",
+          "share": 63
+        },
+        {
+          "recipient": "GMX Staker (Buyback)",
+          "share": 27
+        },
+        {
+          "recipient": "Protocol Treasury",
+          "share": 8.2
+        },
+        {
+          "recipient": "Chainlink Oracles",
+          "share": 1.2
+        }
       ],
       "v1": [
-        { "recipient": "GLP Holder", "share": 70.0 },
-        { "recipient": "GMX Staker", "share": 30.0 }
+        {
+          "recipient": "GLP Holder",
+          "share": 70
+        },
+        {
+          "recipient": "GMX Staker",
+          "share": 30
+        }
       ],
       "note": "Fees werden in nativen Trading-Tokens eingesammelt (WETH auf Arbitrum, WAVAX auf Avalanche). GM LPs erhalten Fees automatisch ueber steigenden Pool-NAV."
     }
@@ -158,9 +233,30 @@
   "governance": {
     "type": "Timelock + Multisig (nicht immutable)",
     "controllers": [
-      { "role": "Timelock", "power": "Zentrale RoleAdmin-Rolle. Vergibt/entzieht Rollen verzögert.", "chains": ["Arbitrum", "Avalanche"] },
-      { "role": "ConfigTimelockController", "power": "Aendert Protokoll-Parameter (Fees, OI Caps, Liquidation-Schwellen).", "chains": ["Arbitrum", "Avalanche"] },
-      { "role": "GovTimelockController", "power": "Governance-Entscheidungen (Token-Whitelisting, Markt-Konfiguration).", "chains": ["Arbitrum", "Avalanche"] }
+      {
+        "role": "Timelock",
+        "power": "Zentrale RoleAdmin-Rolle. Vergibt/entzieht Rollen verzögert.",
+        "chains": [
+          "Arbitrum",
+          "Avalanche"
+        ]
+      },
+      {
+        "role": "ConfigTimelockController",
+        "power": "Aendert Protokoll-Parameter (Fees, OI Caps, Liquidation-Schwellen).",
+        "chains": [
+          "Arbitrum",
+          "Avalanche"
+        ]
+      },
+      {
+        "role": "GovTimelockController",
+        "power": "Governance-Entscheidungen (Token-Whitelisting, Markt-Konfiguration).",
+        "chains": [
+          "Arbitrum",
+          "Avalanche"
+        ]
+      }
     ],
     "keyRisks": [
       "Admin kann Handelsaktivitaeten einfrieren ohne Vorwarnung",
@@ -173,17 +269,44 @@
   },
   "tokenFunctions": {
     "requiresToken": [
-      { "function": "Governance Voting", "detail": "GMX Token noetig fuer Snapshot/Tally Abstimmungen" },
-      { "function": "Staking Rewards", "detail": "Nur GMX/esGMX-Staker erhalten Fee-Anteil (27% V2)" },
-      { "function": "Staking Power Accrual", "detail": "Staked GMX/esGMX generiert Power fuer zukuenftige Reward-Verteilung" },
-      { "function": "Multiplier Points", "detail": "Nur durch GMX-Staking erhaeltlich, boosten Rewards" }
+      {
+        "function": "Governance Voting",
+        "detail": "GMX Token noetig fuer Snapshot/Tally Abstimmungen"
+      },
+      {
+        "function": "Staking Rewards",
+        "detail": "Nur GMX/esGMX-Staker erhalten Fee-Anteil (27% V2)"
+      },
+      {
+        "function": "Staking Power Accrual",
+        "detail": "Staked GMX/esGMX generiert Power fuer zukuenftige Reward-Verteilung"
+      },
+      {
+        "function": "Multiplier Points",
+        "detail": "Nur durch GMX-Staking erhaeltlich, boosten Rewards"
+      }
     ],
     "worksWithoutToken": [
-      { "function": "Trading (Perps)", "detail": "Kein GMX noetig zum Handeln. Collateral in USDC/ETH/BTC." },
-      { "function": "Swap", "detail": "Token-Swaps funktionieren ohne GMX-Besitz" },
-      { "function": "Liquidity Provision (GM)", "detail": "GM-Pools erfordern kein GMX. LPs erhalten 63% der Fees direkt." },
-      { "function": "GLV Vaults", "detail": "Liquidity Vaults funktionieren ohne GMX" },
-      { "function": "Cross-Chain Trading", "detail": "GMX Express / Multichain funktioniert ohne Token-Besitz" }
+      {
+        "function": "Trading (Perps)",
+        "detail": "Kein GMX noetig zum Handeln. Collateral in USDC/ETH/BTC."
+      },
+      {
+        "function": "Swap",
+        "detail": "Token-Swaps funktionieren ohne GMX-Besitz"
+      },
+      {
+        "function": "Liquidity Provision (GM)",
+        "detail": "GM-Pools erfordern kein GMX. LPs erhalten 63% der Fees direkt."
+      },
+      {
+        "function": "GLV Vaults",
+        "detail": "Liquidity Vaults funktionieren ohne GMX"
+      },
+      {
+        "function": "Cross-Chain Trading",
+        "detail": "GMX Express / Multichain funktioniert ohne Token-Besitz"
+      }
     ],
     "assessment": "Der GMX-Token ist primaer ein Governance- und Revenue-Sharing-Token. Die Kernfunktionen des Protokolls (Trading, LPs, Swaps) funktionieren vollstaendig ohne GMX-Besitz. Die Wertanbindung des Tokens ist daher indirekt und governance-abhaengig."
   },
@@ -203,10 +326,30 @@
       "feeYield": "Ann. Revenue / MCap × 100"
     },
     "comparison": [
-      { "name": "GMX", "revToMcap": 0.174, "profitToMcap": 0.013, "feeYield": 17.4 },
-      { "name": "Hyperliquid", "revToMcap": 0.136, "profitToMcap": null, "feeYield": 13.6 },
-      { "name": "Jupiter", "revToMcap": 0.016, "profitToMcap": null, "feeYield": 1.6 },
-      { "name": "dYdX", "revToMcap": 0.005, "profitToMcap": null, "feeYield": 0.5 }
+      {
+        "name": "GMX",
+        "revToMcap": 0.174,
+        "profitToMcap": 0.013,
+        "feeYield": 17.4
+      },
+      {
+        "name": "Hyperliquid",
+        "revToMcap": 0.136,
+        "profitToMcap": null,
+        "feeYield": 13.6
+      },
+      {
+        "name": "Jupiter",
+        "revToMcap": 0.016,
+        "profitToMcap": null,
+        "feeYield": 1.6
+      },
+      {
+        "name": "dYdX",
+        "revToMcap": 0.005,
+        "profitToMcap": null,
+        "feeYield": 0.5
+      }
     ]
   },
   "source": "DeFiLlama API, GMX Docs, Governance Forum, Arbiscan"
