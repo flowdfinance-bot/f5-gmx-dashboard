@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-08-15",
-  "tvl": 183086713,
+  "lastUpdated": "2026-09-01",
+  "tvl": 208335774,
   "tvlBreakdown": {
-    "arbitrumstaking": 41313958,
-    "avalanche": 10500393,
-    "avalanchestaking": 1271725,
-    "arbitrum": 171971048,
-    "staking": 42585684,
+    "avalanchestaking": 1390033,
+    "arbitrumstaking": 44963049,
+    "avalanche": 10245592,
+    "arbitrum": 197477802,
+    "staking": 46353083,
     "botanix": 0,
-    "megaeth": 615270
+    "megaeth": 612379
   },
   "chains": [],
   "description": "Leading onchain exchange for perpetual and spot trading with deep liquidity, low fees, and multi-chain support.",
   "category": "Derivatives",
   "fees": {
-    "daily": 54202,
-    "weekly": 246649,
-    "monthly": 1363810,
-    "allTime": 463828836
+    "daily": 30605,
+    "weekly": 287142,
+    "monthly": 1799108,
+    "allTime": 465117890
   },
   "feeDistribution": {
     "v2": {
